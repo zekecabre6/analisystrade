@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/analisystrade/static/css/main.da43f9fb.css",
+    "main.js": "/analisystrade/static/js/main.694aff14.js",
+    "static/js/845.770170f0.chunk.js": "/analisystrade/static/js/845.770170f0.chunk.js",
+    "index.html": "/analisystrade/index.html",
+    "main.da43f9fb.css.map": "/analisystrade/static/css/main.da43f9fb.css.map",
+    "main.694aff14.js.map": "/analisystrade/static/js/main.694aff14.js.map",
+    "845.770170f0.chunk.js.map": "/analisystrade/static/js/845.770170f0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.da43f9fb.css",
+    "static/js/main.694aff14.js"
+  ]
+}
