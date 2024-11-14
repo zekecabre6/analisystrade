@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/criptomix-analytics/static/css/main.da43f9fb.css",
+    "main.js": "/criptomix-analytics/static/js/main.0b1d7279.js",
+    "static/js/845.774f7eea.chunk.js": "/criptomix-analytics/static/js/845.774f7eea.chunk.js",
+    "index.html": "/criptomix-analytics/index.html",
+    "main.da43f9fb.css.map": "/criptomix-analytics/static/css/main.da43f9fb.css.map",
+    "main.0b1d7279.js.map": "/criptomix-analytics/static/js/main.0b1d7279.js.map",
+    "845.774f7eea.chunk.js.map": "/criptomix-analytics/static/js/845.774f7eea.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.da43f9fb.css",
+    "static/js/main.0b1d7279.js"
+  ]
+}

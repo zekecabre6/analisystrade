@@ -1,0 +1,268 @@
+/* Estilos Generales */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #1C1C1C; /* Fondo oscuro */
+  color: #FFFFFF; /* Texto blanco */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 1s ease-out;
+}
+
+/* Animación de desvanecimiento */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+h1, h2 {
+  color: #FFFFFF;
+  margin-top: 20px;
+  animation: slideIn 1s ease-out;
+}
+
+/* Animación para h1 y h2 */
+@keyframes slideIn {
+  0% { transform: translateY(-20px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+h3 {
+  color: #FFA500; /* Naranja similar al logo */
+  margin-top: 15px;
+}
+
+pre {
+  background-color: #2C2C2C; /* Fondo oscuro para bloques de código */
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  color: #FFFFFF;
+  animation: fadeIn 2s ease-out;
+}
+
+/* Contenedor Principal */
+.App {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #333333; /* Fondo oscuro intermedio */
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  animation: zoomIn 1s ease-out;
+}
+
+/* Animación para el contenedor principal */
+@keyframes zoomIn {
+  0% { transform: scale(0.9); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Botones */
+button {
+  background-color: #FFA500; /* Naranja del logo */
+  color: #FFFFFF;
+  padding: 10px 15px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: #e59400; /* Tono más oscuro para hover */
+  transform: translateY(-3px);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* Contenedor para Datos y Gráfico */
+.resultados-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  animation: fadeIn 2s ease-out;
+}
+
+.datos-container {
+  flex: 1;
+  max-width: 45%;
+  margin-right: 20px;
+  text-align: left;
+  background-color: #2C2C2C; /* Fondo oscuro para datos */
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  animation: slideIn 1s ease-out;
+}
+
+.pie-chart-container {
+  flex: 1;
+  max-width: 45%;
+  background-color: #2C2C2C;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  animation: slideIn 1s ease-out;
+}
+
+/* Estilo de la Carga y Errores */
+.loading, .error {
+  color: #FF6347;
+  font-size: 18px;
+  margin-top: 20px;
+  animation: bounceIn 1s ease-out;
+}
+
+/* Animación de rebote para carga y errores */
+@keyframes bounceIn {
+  0% { transform: scale(0); opacity: 0; }
+  50% { transform: scale(1.2); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
+/* Estilos para los datos */
+.datos-container h3 {
+  color: #FFA500;
+  margin-bottom: 20px;
+}
+
+.datos-list {
+  list-style-type: none;
+  padding: 0;
+  animation: fadeIn 1s ease-out;
+}
+
+.datos-list li {
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #F0F0F0;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 500;
+  transition: transform 0.3s ease-in-out;
+}
+
+.datos-list li:hover {
+  transform: scale(1.05);
+}
+
+/* Colores específicos en el mismo orden que el gráfico */
+.datos-list li:nth-child(1) {
+  background-color: #FFA500; /* Naranja */
+}
+
+.datos-list li:nth-child(2) {
+  background-color: #00FF00; /* Naranja oscuro */
+}
+
+.datos-list li:nth-child(3) {
+  background-color: #FF0000; /* Dorado */
+}
+
+.datos-list li:nth-child(4) {
+  background-color: #D2691E; /* Marrón oscuro */
+}
+
+/* Estilo para la ventana flotante */
+.loading-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Para asegurarse de que esté encima de todo */
+}
+
+.loading-content {
+  background-color: #FFA500; /* Fondo naranja */
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 1s ease-out;
+}
+
+.loading-content p {
+  font-size: 18px;
+  font-weight: bold;
+  color: white; /* Texto blanco para que sea legible sobre el fondo naranja */
+}
+/* Estilos Responsivos para Móvil */
+@media (max-width: 600px) {
+  /* Ajustes para el contenedor principal */
+  .App {
+    padding: 15px;
+    border-radius: 5px;
+  }
+
+  /* Títulos */
+  h1, h2 {
+    font-size: 1.5em; /* Tamaño de fuente reducido */
+    margin-top: 15px;
+  }
+
+  h3 {
+    font-size: 1.2em;
+  }
+
+  /* Botones */
+  button {
+    padding: 8px 10px; /* Menor padding en botones */
+    font-size: 0.9em;
+    margin: 5px;
+  }
+
+  /* Contenedor para Datos y Gráfico */
+  .resultados-container {
+    flex-direction: column; /* Columna en vez de fila */
+    align-items: center;
+  }
+
+  .datos-container,
+  .pie-chart-container {
+    max-width: 100%;
+    margin: 10px 0; /* Espaciado entre secciones */
+    padding: 15px;
+  }
+
+  /* Lista de datos */
+  .datos-list li {
+    font-size: 0.9em;
+    padding: 8px;
+  }
+
+  /* Estilo de carga y error */
+  .loading, .error {
+    font-size: 16px; /* Reducido para mejor legibilidad */
+    margin-top: 15px;
+  }
+
+  /* Ventana flotante */
+  .loading-modal {
+    padding: 15px; /* Ajuste de padding para dispositivos móviles */
+  }
+
+  .loading-content {
+    padding: 15px;
+    font-size: 16px;
+  }
+}

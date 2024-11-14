@@ -1,0 +1,29 @@
+# Etapa 1: Construcción
+FROM node:18 AS build
+
+# Definir el directorio de trabajo dentro del contenedor
+WORKDIR /app
+
+# Copiar el package.json y package-lock.json al contenedor
+COPY informe-trading/package*.json ./
+
+# Instalar las dependencias de npm
+RUN npm install
+
+# Copiar el resto del código fuente de la aplicación al contenedor
+COPY informe-trading/ ./
+
+# Construir la aplicación de React para producción
+RUN npm run build
+
+# Etapa 2: Servir la aplicación
+FROM nginx:alpine
+
+# Copiar los archivos de la construcción de React al contenedor Nginx
+COPY --from=build /app/build /usr/share/nginx/html
+
+# Exponer el puerto en el que Nginx servirá la aplicación
+EXPOSE 80
+
+# Comando para ejecutar Nginx
+CMD ["nginx", "-g", "daemon off;"]
